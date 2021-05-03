@@ -1,0 +1,136 @@
+<!DOCTYPE html><html>
+
+	<meta charset="utf-8"/>
+	
+    <title>Shark Attack</title>
+
+    <meta name="ad.size" content="width=300,height=250"/>    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <!-- force webkit on 360 -->
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <!-- force edge on IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+
+    <!-- force full screen on some browser -->
+    <meta name="full-screen" content="yes"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+
+    <!-- force screen orientation on some browser -->
+    <!-- <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-orientation" content="portrait"> -->
+
+    <meta name="browsermode" content="application"/>
+    <meta name="x5-page-mode" content="app"/>
+
+
+    <title>Shark Attack</title>
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8">
+
+	<script> 
+        var clickTag = "https://play.google.com/store/apps/details?id=com.fpg.sharkattack";
+		if (/android/i.test(navigator.userAgent)) clickTag = 'https://play.google.com/store/apps/details?id=com.fpg.sharkattack';
+		else if(/iPad|iPhone|iPod/.test(navigator.userAgent)) clickTag = 'https://apps.apple.com/app/shark-attack-simulator-games/id1489941954';
+    </script>
+
+    <style type="text/css">
+        .center {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: auto auto;
+            vertical-align: middle;
+        }
+
+        html, body {
+            overflow: hidden;
+            width   : 100%;
+            height  : 100%;
+            margin  : 0;
+            padding : 0;
+            display: flex;
+        }
+        .parent {
+            margin: auto;
+            background-color: #000;
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 150%);
+            z-index: 100;
+        }
+		video{
+
+			padding: 0;
+			margin: 0;
+			width: 300px;
+			height: 250px;
+			object-fit: cover;
+			z-index: 111;
+
+			display:none;
+		}
+    </style>
+
+
+<script charset="utf-8">
+	window.onresize = function(event) {
+		handleSize();
+	};
+	var mp4_l = "kill.gif";
+	
+	var mp4_p = "kill.gif";
+	var currOrient = "";
+	
+	function handleSize(){
+		var vid = document.getElementById('gifimage');
+		var vidSource = document.getElementById('vidsource');
+		
+		vid.style.height=250;
+		vid.style.width=300;
+ 		//vidSource.setAttribute('src', mp4_p);
+
+// 		console.log("setToP");
+ 		//vid.load();
+ 		//vid.play();
+	}
+	function resetCSS(){
+
+	}
+</script>
+<script>
+	function clickthrough(event){
+		event.preventDefault();
+		location.href=clickTag;
+	}
+
+</script>
+
+<body style="background-color:#00C0FF;" alignment="center" >
+<div id="gamebox" class="parent" style="position:absolute; background-color: #2d88b3; width: 300px; height: 250px;">
+	  <img id="gifimage1" class="center"   onclick="clickthrough(event)" src="kill.gif" alt="Shark Attack">
+    <div class="centered">
+    </div>
+</div>
+
+</body>
+<script>
+	handleSize();
+</script>
+</html>
